@@ -1,5 +1,15 @@
 name: Test project
-on: push
+on:
+  push:
+    branches:
+      - dev
+      - staging
+      - main
+  pull_request:
+    branches:
+      - dev
+      - staging
+      - main
 jobs:
   test:
     runs-on: ubuntu-latest
